@@ -1,0 +1,27 @@
+x = []
+y = int(input())
+
+# no of input in list 
+n = int(input())
+
+for a in range(0 , n-1):
+  s = int(input())
+  x.append(s)  
+
+ans = []
+x.sort()
+def solve(x , n , y):
+  s = 0 
+  e = n-1 
+  while s < e :
+    if(x[s] + x[e] == y):
+      ans.append(x[s])
+      ans.append(x[e])
+    elif((x[s] + x[e] > y):
+      e-- 
+    else :
+      s++ 
+
+print("ans is " , solve(x , n, y))
+    
+      
